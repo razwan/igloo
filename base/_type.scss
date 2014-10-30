@@ -1,0 +1,145 @@
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h1, .h1 {
+	@include baseline(54px);
+	margin-top: 2 * $u;
+}
+
+h2, .h2 {
+	@include baseline(36px);
+	margin-top: 2 * $u;
+}
+
+h3, .h3 {
+	@include baseline(24px);
+}
+
+h4, .h4 {
+	@include baseline(19px);
+}
+
+h5, .h5 {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+h6, .h6 {
+	@include baseline(14px);
+	text-transform: uppercase;
+}
+
+
+
+/* Paragraphs */
+%default-baseline-font,
+p {
+	@include baseline(16px);
+}
+
+
+
+/* Links */
+a {
+
+	&:hover {
+
+	}
+
+	&:active {
+
+	}
+
+	&:visited {
+
+	}
+}
+
+
+
+/* Lists */
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-left: 3rem;
+}
+
+dd + dt {
+	margin-top: 1.5rem;
+}
+
+ul, ol {
+	list-style: inside;
+
+	& & {
+		margin-left: rhythm(2);
+		margin-top: rhythm(1/2);
+		margin-bottom: rhythm(1/2);
+	}
+}
+
+li {
+	margin-bottom: rhythm(1/2);
+}
+
+ul, ol, dl {
+	@include baseline(16px);
+
+	ul, ol, dl {
+		transform: none;
+	}
+}
+
+/* Blockquotes */
+blockquote {
+	font-size: 28px;
+}
+
+
+/* Tables */
+table {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+
+/* Code */
+pre,
+code,
+samp {
+	font-family: 'Source Code Pro', Consolas, monospace;
+	font-size: inherit;
+}
+
+pre {
+	position: relative;
+	padding: rhythm(1) rhythm(2);
+	outline: 1px solid $gray;
+	overflow: auto;
+	@extend %default-baseline-font;
+
+	&:before {
+		content: "</>";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 3px;
+		color: white;
+		background: $gray;
+	}
+}
+
+big {
+	@include line-height(19px);
+}

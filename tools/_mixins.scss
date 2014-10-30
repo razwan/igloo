@@ -1,0 +1,9 @@
+@mixin media-query($condition) {
+	@media #{$condition} {
+		@content;
+	}
+}
+
+@mixin query-below($value) {
+
+}

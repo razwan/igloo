@@ -1,0 +1,14 @@
+$font-size: 		16px;
+$line-height:		1.5;
+
+$u: 				$line-height * 1rem;
+
+$text-color:    	#222;
+$background-color: 	#fff;
+$white: 			#fff;
+$gray: 				#ccc;
+
+$breakpoints: (
+	lap: 'not screen and (min-width: ' + 800px*1em/16px + ')',
+	desk: 'not screen and (min-width: ' + 1200px*1em/16px + ')'
+)
