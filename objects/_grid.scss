@@ -1,15 +1,16 @@
 .grid {
 	@extend %clearfix;
 	margin-left: rhythm(-2);
+}
 
-	> .grid__item {
-		padding-left: rhythm(2);
-	}
+.grid-item {
+	float: left;
+	padding-left: rhythm(2);
 }
 
 @for $i from 2 through 6 {
 
-	.grid-#{$i} > .grid__item {
+	.grid-#{$i} > .grid-item {
 		width: percentage(1/$i);
 	}
 
